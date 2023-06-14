@@ -1,0 +1,66 @@
+---
+title: "Transición Energética"
+author: "Equipo 4"
+date: "2023-06-14"
+output:
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Conntenido
+
+- Objetivos
+- 1.- Contexto global
+- 2.- Problemática nacional
+- 3.- Marco legal e institucional
+- 4.- Desarrollo del problema
+- 5.- Dilemas
+- 6.- Soluciones
+- Conclusiones
+- Fuentes
+
+
+## Objetivos
+
+La transición energética se refiere al cambio del sector energético global de los sistemas de producción y consumo de energía basados en fósiles, incluidos el petróleo, el gas natural y el carbón, a fuentes de energía renovables como la eólica y la solar, entre otras. 
+
+La creciente penetración de las energías renovables en la combinación de suministro de energía, el inicio de la electrificación y las mejoras en el almacenamiento de energía son factores clave de la transición energética, por lo tanto, el objetivo principal de este trabajo es el de analizar la evolución al mes de junio de 2023, de los principales indicadores que nos permitan conocer si los objetivos planteados se han alcanzado o si las tendencias son favorables en este sentido.
+
+Por lo tanto, este trabajo se divide en 6 secciones y una conclusión general, analizando el caso particular de México frente al mundo. 
+
+
+## 1.- Contexto global del tema
+
+```{r}
+df <- read.table(paste0("https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt"),
+                 header = TRUE)
+
+```
+
+
+
+
+
+
+## 2.- Problemática nacional
+
+
+## 3.- Marco legal e institucional
+
+
+## 4.- Desarrollo del problema
+
+## 5.- Dilemas
+
+## 6.- Soluciones
+
+## Conclusiones
+
+## Fuentes
+
+
