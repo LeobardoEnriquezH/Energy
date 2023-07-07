@@ -43,26 +43,31 @@ loadfonts(device = "win")
 
 ## Conntenido
 
-- Objetivos
-- 1.- Contexto global
+- Definición y Objetivos
+- 1.- Contexto global e histórico
 - 2.- Problemática nacional
 - 3.- Marco legal e institucional
 - 4.- Desarrollo del problema
-- 5.- Dilemas
-- 6.- Soluciones
+  - 4.1.- Factor político, ideológico, institucional y legal.
+  - 4.2.- Factor económico y de impacto ambiental
+  - 4.3.- Resistencias a la implementación disrruptiva
+  - 4.4.- Escenarios
+- 5.- Soluciones
 - Conclusiones
 - Fuentes
 
 
-## Objetivos
+## Definición y Objetivos
 
-La transición energética se refiere al cambio del sector energético global de los sistemas de producción y consumo de energía basados en fósiles, incluidos el petróleo, el gas natural y el carbón, a fuentes de energía renovables como la eólica, la solar, hidrógeno, entre otras. 
+Definición: La transición energética se refiere al cambio del sector energético global de los sistemas de producción y consumo de energía basados en fósiles, incluidos el petróleo, el gas natural y el carbón, a fuentes de energía renovables como la eólica, la solar, hidrógeno, entre otras. 
 
-La creciente penetración de las energías renovables en la combinación de suministro de energía, la electrificación y las mejoras en el almacenamiento de energía son factores clave de la transición energética, por lo tanto, los objetivos de este trabajo son analizar la evolución al 2022, de los principales indicadores que nos permitan conocer si los objetivos  se han alcanzado o si las tendencias son favorables, poniendo énfasis en el caso mexicano, además de identificar las causas y el papel del gobierno, comparado con otros países dentro del contexto latinoamericano.
+Pregunta: ¿Está México en condiciones de cumplir con la transición energética a 2030?
+
+Objetivos: a) Factores políticos, ideológicos, legales e institucionales, b) Factores económicos e impacto ambiental, c) Resistencias a la implementación, d) Identificación de escenarios.
 
 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 ```{r, echo=FALSE  , warning=FALSE}
 df <- read.table(paste0("https://raw.githubusercontent.com/LeobardoEnriquezH/Data/main/co2.txt"), header = TRUE)
@@ -99,7 +104,7 @@ p
 ```
 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 ```{r, echo=FALSE  , warning=FALSE}
 df1 <- read.table(paste0("https://raw.githubusercontent.com/LeobardoEnriquezH/Data/main/LandOcean.txt"), header = TRUE)
@@ -143,14 +148,14 @@ p
 
 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 ```{r, echo=FALSE  , warning=FALSE}
 df2 <- read.table("https://raw.githubusercontent.com/LeobardoEnriquezH/Data/main/global_seaice_extent.csv", header = TRUE, sep = ",")
 
 ```
 
-
+NSIDC: La extensión de hielo marino mundial ha estado disminuyendo.
 
 ```{r, echo=FALSE, warning=FALSE}
 p <- ggplot(df2, aes(x=Month, y=y2023)) +
@@ -187,43 +192,44 @@ p <- ggplot(df2, aes(x=Month, y=y2023)) +
 p
 ```
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 El calentamiento global, además de provocar el derretimiento de los casquetes polares y el aumento del nivel del mar, está provocando otros cambios climáticos como la desertificación y el aumento de fenómenos meteorológicos extremos como huracanes, inundaciones, incendios, entre otros.
 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 La comunidad científica está de acuerdo en que esto se debe a las emisiones de gases de efecto invernadero a la atmósfera, especialmente desde la Revolución Industrial. 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 El principal gas de efecto invernadero, el dióxido de carbono, se origina en gran medida en el sector de la energía, principalmente la generación de electricidad.
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 En diciembre de 2015, en la COP 21 de París, se firmó un acuerdo internacional que fijó el objetivo de limitar el calentamiento global a finales de este siglo por debajo de los 2 °C en comparación con los niveles preindustriales y, preferentemente, limitarlo a 1.5 °C.
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 La COP26, que tuvo lugar en noviembre de 2021 en Glasgow, confirmó el compromiso de alcanzar la neutralidad de carbono para 2050. 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 Para lograr este objetivo, la principal herramienta es la transición energética, es decir, el cambio de una matriz energética basada en combustibles fósiles a uno que produzca emisiones de carbono muy limitadas, si no nulas, basado en fuentes de energía renovables. 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 Una gran contribución a la descarbonización proviene de la electrificación del consumo, reemplazando la electricidad generada a partir de combustibles fósiles por energía generada a partir de fuentes renovables, lo que también hace que otros sectores como el transporte sean más limpios; la digitalización de las redes también contribuye mejorando la eficiencia energética.
 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 ```{r, echo=FALSE  , warning=FALSE}
 df3 <- read.table("https://raw.githubusercontent.com/LeobardoEnriquezH/Data/main/RenewableShare.csv", header = TRUE, sep = ",")
 
 ```
 
+IEA: La proporción de renovables modernos en el consumo final de energía total ha estado aumentando, pero sigue siendo muy bajo. 
 
 ```{r, echo=FALSE  , warning=FALSE}
 
@@ -254,13 +260,14 @@ p
 ```
 
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 ```{r, echo=FALSE  , warning=FALSE}
 df4 <- read.table("https://raw.githubusercontent.com/LeobardoEnriquezH/Data/main/modernrenewable_prod.csv", header = TRUE, sep = ",")
 
 ```
 
+IEA: La generación de energía renovable ha estado aumentando, especialmente hidroeléctrica y eólica. 
 
 ```{r, echo=FALSE  , warning=FALSE}
 df4world <- filter(df4, (Entity=="World"))
@@ -300,12 +307,15 @@ legend("topleft",
 
 ```
 
-## 1.- Contexto global
+## 1.- Contexto global e histórico
 
 ```{r, echo=FALSE  , warning=FALSE}
 df5 <- read.table("https://raw.githubusercontent.com/LeobardoEnriquezH/Data/main/fossilfuel_cons.csv", header = TRUE, sep = ",")
 
 ```
+
+
+IEA: Los combustibles fósiles en el consumo final de energía también ha aumentado y a una escala mayor medido en TWh. 
 
 
 ```{r, echo=FALSE  , warning=FALSE}
@@ -324,6 +334,8 @@ ggplot(df5_1,
 
 
 ## 2.- Problemática nacional
+
+IEA: Aún cuando hay una tendencia creciente en la última década en México, los montos son muy inferiores a fósiles (Ver próxima gráfica)
 
 ```{r, echo=FALSE  , warning=FALSE}
 df4Mx <- filter(df4, (Entity=="Mexico"))
@@ -366,6 +378,10 @@ legend("topleft",
 
 ## 2.- Problemática nacional
 
+
+IEA: Combustibles de origen fósil, principalmente el gas, han aumentado más que los renovables y los montos son mayores. 
+
+
 ```{r, echo=FALSE  , warning=FALSE}
 df5_2<-filter(df5, (Entity=="Mexico"))
 df5_2<-select (df5_2,-c(Entity,Code))
@@ -381,57 +397,90 @@ ggplot(df5_2,
 
 ## 3.- Marco legal e institucional
 
+Presentación breve de las principales leyes, reglamentos y acuerdos que México ha suscrito y publicado en el contexto de la transición energética. 
 
 ## 4.- Desarrollo del problema
 
-## 5.- Dilemas
+Aquí se desarrolan los 4 objetivos planteados: 
 
-* La promosión de vehículos eléctricos para redicir los GEI ha producido una carrera global por la extracción del litio para baterías (además del niquel y cobalto), lo cual provoca daños ambientales y afecta a las comunidades cercanas a las minas: se mantiene el modelo extractivista (probable mayor impacto en A. Latina). La UE requiere que para 2035 haya 30 millones de estos vehículos y empezar a prohibir los alimentados por combustibles fósiles, mientras que China planea que éstos representen el 40% de sus ventas de vehículos en 2030. ¿cómo efectuar una transición hacia tecnologías que provoquen menores daños al clima mientras se respetan los derechos de las comunidades afectadas por la extracción?
+4.1.- Factor político, ideológico, institucional y legal.
 
-## 5.- Dilemas
+Argumentar si la ideología de los políticos son un factor inportante para seguir apostando por los combustibles fósiles, si ese fuera el caso, esto debería de verse reflejado en las leyes que se han aprobado en el congreso (Leyes de la industria eléctrica y de hidrocarburos principalmente), y en las instituciones a los que se ha dado más impulso y presupuesto (CFE, PEMEX, CRE, CNH, etc, contra SEMARNAT, CONABIO, CONAGUA, CONAFOR, etc). 
 
-* Para muchos países, en una estrategia de largo plazo, es clave resolver el dilema entre un horizonte de aprovechamiento más intensivo de los recursos fósiles contra la incorporación más acelerada de energías renovables.Es decir, un escenario que maximice la explotación de los recursos disponibles en una transición gradual u optar por la descarbonización acelerada para converger a emisiones neutrales más rápidamente. Las anteriores transiciones (madera a fósiles, o carbón a petróleo) estuvieron fundadas en tecnologías, ventaja económica del cambio, con procesos acumulativos de muchos años. Incluso el carbón fue desplazado por el petróleo como primera fuente de energía en la matriz energética mundial en 1960, pero no se cerraron las minas de carbón, la explotación se concentró en las más productivas (hoy se usa 3 veces más carbón que entonces).
+## 4.- Desarrollo del problema
 
-## 5.- Dilemas
-
-* En algunos países, donde se tienen monopolios como en el caso de México con PEMEX y CFE, ¿sería conveniente que el estado tome el papel de regulador y las empresas privadas se dediquen a toda la cadena de valor de una industra energética competitiva? o bien ¿el manejo del estado de toda la cadena de valor de la industria energética garantizaría que la transición hacia las energías limpias sea más rápida?, ¿cuál sería la combinación óptima entre la intervención del estado y el papel de los privados que genere los incentivos necesarios para una acelerada transición?     
-
-## 5.- Dilemas
-
-* La relocalización y la reconversión en las plantas de generación de energía, ¿qué afectaciones podría tener en las comunidades?, ¿cómo evitar al mismo tiempo los problemas de contestación social?. Por ejemplo, la energía nuclear, presenta en algunos países el problema de contestación social conocido como NIMBY (no en el patio de mi casa) que se intensificó tras el accidente en Fukushima en 2011 (Alemania cerró sus últimas 3 plantas en abril de 2023). Esto es, si bien se acepta una mayor implantación de energías renovables, no se quieren las instalaciones cerca de la casa.Las reticencias sobre los grandes parques eólicos es otro ejemplo.   
-
-## 5.- Dilemas
-
-* ¿ Cómo guiar el ritmo de descarbonización para alcanzar cero emisiones netas de carbono, dado que casi el 60% de la energía generada aún proviene del petróleo y del carbón y 25% del gas natural, sin provocar un problema inflacionario en un contexto pandémico y de guerra? Por ejemplo, para Europa se ha vuelto complicado con el dilema de subidas permanentes de precios del gas natural como combustible de transición hacia energías limpias o aceptar el retroceso que implicaría regresar al carbón para generar electricidad como en Alemania.       
+4.2.- Factor económico y de impacto ambiental
 
 
+Argumentar si se debe a una cuestión económica en el sentido de que es más barato producir los combustibles fósiles, si hay mayor disponibilidad, o si es aún muy caro producir energía renovable. Al parecer las tecnologías se han abaratado, y en un plan de largo plazo saldría más barato producir con tecnologías limpias que con fósiles, pero hay que argumentar entonces que el argumento económico no se sostiene. Además del impacto ambiental que tiene uno sobre lo otro.
+
+## 4.- Desarrollo del problema
+
+4.3.- Resistencias a la implementación disrruptiva
+
+Aquí analizar casos en que la comunidad en las que se instalan las presas, parques eólicos o páneles solares se resisten a éstas por muchas posibles razones (ruido, estéticos, zonas sagrados, afectación del ecosistema, etc), ¿esta es entonces una razón por la cuál no transitamos a mayor ritmo a nuevas tecnologías de producción de energía?  
+
+## 4.- Desarrollo del problema
+
+4.4.- Escenarios
+
+Plantear los esenarios: tendencial (si seguimos igual), optimista (si cambiamos de rumbo) y pesimista (si aceleramos el uso de combustibles fósiles). 
 
 
 
-## 6.- Soluciones
+```{r, echo=FALSE }
+## DILEMAS
+
+#* La promosión de vehículos eléctricos para redicir los GEI ha producido una carrera global por la extracción del litio para baterías (además del niquel y cobalto), lo cual provoca daños ambientales y afecta a las comunidades cercanas a las minas: se mantiene el modelo extractivista (probable mayor impacto en A. Latina). La UE requiere que para 2035 haya 30 millones de estos vehículos y empezar a prohibir los alimentados por combustibles fósiles, mientras que China planea que éstos representen el 40% de sus ventas de vehículos en 2030. ¿cómo efectuar una transición hacia tecnologías que provoquen menores daños al clima mientras se respetan los derechos de las comunidades afectadas por la extracción?
+
+#* Para muchos países, en una estrategia de largo plazo, es clave resolver el dilema entre un horizonte de aprovechamiento más intensivo de los recursos fósiles contra la incorporación más acelerada de energías renovables.Es decir, un escenario que maximice la explotación de los recursos disponibles en una transición gradual u optar por la descarbonización acelerada para converger a emisiones neutrales más rápidamente. Las anteriores transiciones (madera a fósiles, o carbón a petróleo) estuvieron fundadas en tecnologías, ventaja económica del cambio, con procesos acumulativos de muchos años. Incluso el carbón fue desplazado por el petróleo como primera fuente de energía en la matriz energética mundial en 1960, pero no se cerraron las minas de carbón, la explotación se concentró en las más productivas (hoy se usa 3 veces más carbón que entonces).
+
+#* En algunos países, donde se tienen monopolios como en el caso de México con PEMEX y CFE, ¿sería conveniente que el estado tome el papel de regulador y las empresas privadas se dediquen a toda la cadena de valor de una industra energética competitiva? o bien ¿el manejo del estado de toda la cadena de valor de la industria energética garantizaría que la transición hacia las energías limpias sea más rápida?, ¿cuál sería la combinación óptima entre la intervención del estado y el papel de los privados que genere los incentivos necesarios para una acelerada transición?     
+
+#* La relocalización y la reconversión en las plantas de generación de energía, ¿qué afectaciones podría tener en las comunidades?, ¿cómo evitar al mismo tiempo los problemas de contestación social?. Por ejemplo, la energía nuclear, presenta en algunos países el problema de contestación social conocido como NIMBY (no en el patio de mi casa) que se intensificó tras el accidente en Fukushima en 2011 (Alemania cerró sus últimas 3 plantas en abril de 2023). Esto es, si bien se acepta una mayor implantación de energías renovables, no se quieren las instalaciones cerca de la casa.Las reticencias sobre los grandes parques eólicos es otro ejemplo.   
+
+#* ¿ Cómo guiar el ritmo de descarbonización para alcanzar cero emisiones netas de carbono, dado que casi el 60% de la energía generada aún proviene del petróleo y del carbón y 25% del gas natural, sin provocar un problema inflacionario en un contexto pandémico y de guerra? Por ejemplo, para Europa se ha vuelto complicado con el dilema de subidas permanentes de precios del gas natural como combustible de transición hacia energías limpias o aceptar el retroceso que implicaría regresar al carbón para generar electricidad como en Alemania. 
+
+#SOLUCIONES
+
+#* La transición deberá ser dependiente de las políticas públicas de las naciones en un ambiente cooperativo, ya que lo que se plantean son procesos disruptivos (no acumulativos) en tan solo un cuarto de siglo. Esto es, los incentivos y desincentivos (p.ej., impuestos al carbono) serán fijadas por las políticas públicas, y las inversiones principalmente privadas (reconfiguración de sus modelos de negocio).  
 
 
-* La transición deberá ser dependiente de las políticas públicas de las naciones en un ambiente cooperativo, ya que lo que se plantean son procesos disruptivos (no acumulativos) en tan solo un cuarto de siglo. Esto es, los incentivos y desincentivos (p.ej., impuestos al carbono) serán fijadas por las políticas públicas, y las inversiones principalmente privadas (reconfiguración de sus modelos de negocio).  
+#* En el caso de México, si bien el Estado debe de procurar la autonomía energética, ésta no contrasta con el diálogo que debe de existir con el sector privado o la incorporación de nuevas tecnologías más limpias. En este sentido, se debe de promover el suministro energético oportuno, diversificado y accesible, con proyectos factibles en lo técnico, económico, ambiental y social, y con un sistema jurídico fuerte que garantice el estado de derecho de los privados, grupos comunitarios, asociaciones civiles, etc. 
 
 
-* En el caso de México, si bien el Estado debe de procurar la autonomía energética, ésta no contrasta con el diálogo que debe de existir con el sector privado o la incorporación de nuevas tecnologías más limpias. En este sentido, se debe de promover el suministro energético oportuno, diversificado y accesible, con proyectos factibles en lo técnico, económico, ambiental y social, y con un sistema jurídico fuerte que garantice el estado de derecho de los privados, grupos comunitarios, asociaciones civiles, etc. 
 
-## 6.- Soluciones
+#* La economía circular es una buena herramienta para la descarbonización, integrando el territorio y las comunidades locales, fijando población y cohesionando a la sociedad, ayudando así a luchar contra las desigualdades de los colectivos vulnerables.
 
-* La economía circular es una buena herramienta para la descarbonización, integrando el territorio y las comunidades locales, fijando población y cohesionando a la sociedad, ayudando así a luchar contra las desigualdades de los colectivos vulnerables.
+#* En 2023, después de la pandemia, con la experiencia de la invasión de Rusia a Ucrania, y con las tensiones regionales en el mundo como la de China y Taywan, y en un contexto de inflación en los combustibles fósiles y la disminución de los costos de las tecnologías renovables: energía solar (85%) y eólica (55%) entre 2010 y 2020, las opciones renovables son técnicamente viables y cada vez más competitivas con respecto a las alternativas fósiles. 
 
-* En 2023, después de la pandemia, con la experiencia de la invasión de Rusia a Ucrania, y con las tensiones regionales en el mundo como la de China y Taywan, y en un contexto de inflación en los combustibles fósiles y la disminución de los costos de las tecnologías renovables: energía solar (85%) y eólica (55%) entre 2010 y 2020, las opciones renovables son técnicamente viables y cada vez más competitivas con respecto a las alternativas fósiles. 
 
-## 6.- Soluciones
 
-* La transición no es fácil ni rápida y requiere de una planificación cuidadosa y de una inversión significativa en infraestructura y tecnologías de energía limpia, specialmente en momentos en los que la demanda de electricidad supera la capacidad de producción de fuentes renovables. 
+#* La transición no es fácil ni rápida y requiere de una planificación cuidadosa y de una inversión significativa en infraestructura y tecnologías de energía limpia, specialmente en momentos en los que la demanda de electricidad supera la capacidad de producción de fuentes renovables. 
 
-* Se requiere de una energía de respaldo que aporte la flexibilidad al sistema (gas natural) e infraestructura para el almacenamiento de energía, como baterías y sistemas de bombeo hidráulico.   
+#* Se requiere de una energía de respaldo que aporte la flexibilidad al sistema (gas natural) e infraestructura para el almacenamiento de energía, como baterías y sistemas de bombeo hidráulico.  
+```
+      
+
+
+
+
+
+## 5.- Soluciones
+
+
+ 
 
 
 
 
 ## Conclusiones
+
+
+
+
+
+
 
 ## Fuentes
 
