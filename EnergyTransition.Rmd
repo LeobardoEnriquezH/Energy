@@ -1,17 +1,7 @@
 ---
 title: "Transición Energética"
 author: 
-        Enriquez Hernández Leobardo,
-        
-        Gutiérrez Valdez Olivia,\
-        
-        Lince Gómez Eduardo,
-        
-        Martínez Rétiz Dalia Viridiana,\
-        
-        Pérez Cano Rosario Evelyn &
-        
-        Valdez Núñez Erick Israel
+        Enriquez Hernández Leobardo
         
         
         
@@ -43,27 +33,27 @@ loadfonts(device = "win")
 
 ## Conntenido
 
-- Definición y Objetivos
+- Introducción: definición y Objetivos
 - 1.- Contexto global e histórico
-- 2.- Problemática nacional
-- 3.- Marco legal e institucional
-- 4.- Desarrollo del problema
-  - 4.1.- Factor político, ideológico, institucional y legal.
-  - 4.2.- Factor económico y de impacto ambiental
-  - 4.3.- Resistencias a la implementación disrruptiva
-  - 4.4.- Escenarios
-- 5.- Soluciones
-- Conclusiones
+- 2.- Problemática en Latinoamérica
+- 3.- El caso de México
+- 4.- Factores de resistencia
+  - 4.1.- Factor político-ideológico 
+  - 4.2.- Factor institucional y legal
+  - 4.3.- Factor económico
+  - 4.4.- Factor de implementación comunitaria
+- 5.- Escenarios
+- Retos y conclusiones
 - Fuentes
 
 
-## Definición y Objetivos
+## Introducción: definición y Objetivos
 
 Definición: La transición energética se refiere al cambio del sector energético global de los sistemas de producción y consumo de energía basados en fósiles, incluidos el petróleo, el gas natural y el carbón, a fuentes de energía renovables como la eólica, la solar, hidrógeno, entre otras. 
 
 Pregunta: ¿Está México en condiciones de cumplir con la transición energética a 2030?
 
-Objetivos: a) Factores políticos, ideológicos, legales e institucionales, b) Factores económicos e impacto ambiental, c) Resistencias a la implementación, d) Identificación de escenarios.
+Objetivos: dar un contexto general de la problemática en lo global, regional y nacional; revisar a) factores políticos-ideológicos, b) factores legales e institucionales, c) factores económicos, c) factores de implementación comunitaria; e identificar los escenarios a 2030 y 2050. 
 
 
 
@@ -503,4 +493,11 @@ Plantear los esenarios: tendencial (si seguimos igual), optimista (si cambiamos 
 8. McKinsey & Company (2022), "The energy transition: A region-by-region agenda for near-term action", Global Energy & Materials Practice and McKinsey Sustainability, December 2022. 
 
 9. Svampa Maristella (2022), "Dilemas de la transición ecosocial desde América Latina", Documentos de Trabajo, Nº especial FC/Oxfam Intermón (2), Madrid, Fundación Carolina/Oxfam Intermón.  
+
+## ffff
+
+```{r}
+#system("cmd.exe", input="start excel")
+#shell("Book1.xlsx", wait = FALSE)
+```
 
